@@ -59,14 +59,62 @@ console.log(yearsFromNow);
 
 // tipCalc = bill => 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-tipCalc = function (bill) { return 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2 };
+// tipCalc = function (bill) { return 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2 };
 
-const bills = [125, 555, 44]
+// const bills = [125, 555, 44]
 
-console.log(bills);
-const tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
-console.log(tips);
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-console.log(totals);
+// console.log(bills);
+// const tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
+// console.log(tips);
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(totals);
 
 // ========== End of chalenge #2 ==========
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriverLicense: true,
+
+//     calcAge: function () {
+//         return this.age = 2022 - this.birthYear;
+//     },
+
+//     // calcAge: function () { return false ? 1 : 0 }
+
+//     // age: function () { return this.calcAge() }
+
+//     getSummary: function () { return `${this.firstName} is a ${this.age}-years ${jonas.job}, who has ${this.hasDriverLicense ? 'a' : 'no'} driving license.` }
+// }
+
+// jonas.calcAge();
+// console.log(jonas.getSummary());
+
+// ========== CHALENGE #3 ==========
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+    },
+}
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+    },
+}
+
+mark.calcBMI();
+john.calcBMI();
+console.log(`John's BMI ${john.bmi} is ${john.bmi > mark.bmi ? 'higher' : 'lower'} than Mark's BMI ${mark.bmi}.`);
