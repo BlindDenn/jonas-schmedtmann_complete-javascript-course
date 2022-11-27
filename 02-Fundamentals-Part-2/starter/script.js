@@ -94,12 +94,12 @@ console.log(yearsFromNow);
 // console.log(jonas.getSummary());
 
 // ========== CHALENGE #3 ==========
-
+/*
 const mark = {
     fullName: 'Mark Miller',
     mass: 78,
     height: 1.69,
-
+    
     calcBMI: function () {
         this.bmi = this.mass / this.height ** 2;
     },
@@ -109,7 +109,7 @@ const john = {
     fullName: 'John Smith',
     mass: 92,
     height: 1.95,
-
+    
     calcBMI: function () {
         this.bmi = this.mass / this.height ** 2;
     },
@@ -117,4 +117,28 @@ const john = {
 
 mark.calcBMI();
 john.calcBMI();
-console.log(`John's BMI ${john.bmi} is ${john.bmi > mark.bmi ? 'higher' : 'lower'} than Mark's BMI ${mark.bmi}.`);
+console.log(`${john.fullName}'s BMI ${john.bmi.toFixed(2)} is ${john.bmi > mark.bmi ? 'higher' : 'lower'} than Mark's BMI ${mark.bmi.toFixed(2)}.`);
+*/
+
+// ========== CHALENGE #4 ==========
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+calcTip = function (bill) { return 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2 };
+calcAverage = function (array) {
+    let sum = 0;
+    for (i = 0; i < array.length; i++) { sum += array[i] };
+    return sum / array.length
+}
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+
+console.log(`Чеки: ${bills}`);
+console.log(`Чаевые: ${tips}`);
+console.log(`Общие суммы: ${totals}`);
+console.log(`Средняя сумма ${calcAverage(totals)}`);
